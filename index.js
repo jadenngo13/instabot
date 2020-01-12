@@ -47,7 +47,7 @@ let options = {
         */
 
         // Follow users that follow following
-        let usersToFollowFollowers = ["shaden8444", "ilagal_1"];
+        let usersToFollowFollowers = ["prattprattpratt", "michaelbjordan"];
         for (let user of usersToFollowFollowers) {
             await instabot.navigateToUser(user);
             await instabot.navigateFollowOrFollowing('following');

@@ -138,9 +138,13 @@ module.exports = async(browser, options) => {
      async function followUsersFollowing(numFollows = 3) {
         // Follow given number of users
         let followBtns = await page.$x('//button[text()="Follow"]');
+        let i = 0;
         for (let j = 0; j < numFollows; j++) {
             await followBtns[j].click();
             await page.waitFor(1000);
+            // Retrieve follow buttons again (prevents circular-json error)
+            followBtns = await page.$x('//button[text()="Follow"]');
+            i++;
         }
         let exitBtn = await page.$$('button');
         await exitBtn[2].click();
