@@ -26,14 +26,14 @@ let options = {
         await instabot.followUsersActivity();
     
         // Follow specified users
-        let users = ["elenacurtin", "liamjarvis00"];
+        let users = ["prattprattpratt", "michaelbjordan"];
         for (let user of users) {
             await instabot.navigateToUser(user);
             await instabot.followCurrentUser();
         }
 
         // Like given number of posts from tags
-        let tags = ["cars", "vacation"];
+        let tags = ["soccer", "vacation"];
         await instabot.likeTags(3, tags);
 
         // Comment on given number of posts in feed
