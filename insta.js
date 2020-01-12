@@ -1,7 +1,6 @@
 'use strict';  
 
 const puppeteer = require('puppeteer');
-const CircularJSON = require('circular-json'); 
 const tagUrl = (tag) => `https://www.instagram.com/explore/tags/${tag}/`;
 
 module.exports = async(browser, options) => { 
