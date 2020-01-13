@@ -192,7 +192,7 @@ module.exports = async(browser, options) => {
                 await page.waitFor(1000);
 
                 // Click out of post
-                let exitBtn = await page.$x(selectors.closeBtn;
+                let exitBtn = await page.$x(selectors.closeBtn);
                 await exitBtn[0].click();
                 await page.waitFor(1000);
             }
