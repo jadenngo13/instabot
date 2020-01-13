@@ -120,9 +120,7 @@ module.exports = async(browser, options) => {
         // Unfollow user
         let followingBtn = await page.$x(selectors.followingBtn);
         if (!followingBtn[0]) throw Error('Could not find following button');
-
         await page.waitFor(1000);
-      
         let unFollowBtn = await page.$x(selectors.unFollowBtn);
         await page.waitFor(1000);
         await unFollowBtn[0].click();
@@ -143,7 +141,7 @@ module.exports = async(browser, options) => {
         // Loop through every follow request and follow account back
         for (let i = 0; i < followBtns.length; i++) {
             let btn = followBtns[i];
-           // await btn.click();
+            await btn.click();
             await page.waitFor(1000);   
         } 
         await page.click(selectors.activityFeedIcon);
