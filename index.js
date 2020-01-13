@@ -23,26 +23,26 @@ let options = {
         await instabot.login();
 
         // Follow users that have followed you
-        await instabot.followUsersActivity();
+      //  await instabot.followUsersActivity();
     
         // Follow specified users
         let users = ["prattprattpratt", "michaelbjordan"];
         for (let user of users) {
-            await instabot.navigateToUser(user);
-            await instabot.followCurrentUser();
+       //     await instabot.navigateToUser(user);
+       //     await instabot.followCurrentUser();
         }
 
         // Like given number of posts from tags
         let tags = ["soccer", "vacation"];
-        await instabot.likeTags(3, tags);
+     //   await instabot.likeTags(3, tags);
 
         // Comment on given number of posts in feed
         let comments = ["hey", "love this post!", "keep up the good work :)"];
-        await instabot.commentFeed(3, comments);
+       // await instabot.commentFeed(3, comments);
 
         // Comment on specific users most recent post
         await instabot.navigateToUser(users[0]);
-        await instabot.commentUser(comments);
+       // await instabot.commentUser(comments);
         
 
         // Follow users that follow following
